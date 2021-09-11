@@ -292,25 +292,30 @@ console.log(alunasReprograma.apresentacao())
 // Vamos criar a classe Alunas
 
 class AlunasReprograma{
-    constructor(name, id, classe){
+    constructor(name, id, classe, ... materia){
         this.name = name
         this.id = id
         this.classe = classe
+        this.assunto = materia
     }
     apresentacao(){
-        return `Olá, ${this.name} - Turma ${this.classe}, Id ${this.id}.`
+        return `Olá, ${this.name} - Turma ${this.classe}, Id ${this.id}, assunto ${this.assunto}.`
     }    
 }
 
-const aluna1 = new AlunasReprograma("Hanna", "On15", "03")
+const aluna1 = new AlunasReprograma("Hanna", "On15", "03", ['S1', 'S2'])
 console.log(aluna1)
-const aluna2 = new AlunasReprograma("Carol", "On15", "04")
+const aluna2 = new AlunasReprograma("Carol", "On15", "04", ['S3', 'S2'])
 console.log(aluna2)
-const aluna3 = new AlunasReprograma("Rafa", "On15", "05")
+const aluna3 = new AlunasReprograma("Rafa", "On15", "05", ['S4', 'S1'])
 console.log(aluna3)
-const aluna4 = new AlunasReprograma("Kamila", "On15", "06")
+const aluna4 = new AlunasReprograma("Kamila", "On15", "06", ['S1', 'S4'])
 console.log(aluna4)
 
+console.log(aluna1.apresentacao())
+console.log(aluna2.apresentacao())
+console.log(aluna3.apresentacao())
+console.log(aluna4.apresentacao())
 
 console.log('-----------------------------------------------------')
 // ARRAYS
@@ -318,13 +323,44 @@ console.log('Arrays [ 0️⃣  , 1️⃣  , 2️⃣  ]')
 
 // Declaração de arrays
 
+const lista = new Array ("Uva", "Abacaxi", "Pera", "Batata")
+console.log(lista)
+
+
 
 // Acessando elementos pela posição do array
 
 
+console.log(`Essa é a posição 1 do meu Array : ${lista[0]}`)
+console.log(`Essa é a posição 2 do meu Array : ${lista[1]}`)
+console.log(`Essa é a posição 3 do meu Array : ${lista[2]}`)
+console.log(`Essa é a posição 4 do meu Array : ${lista[3]}`)
 // Informe o tamanho de cada array
-
+console.log(`Esse é  o tamanho do meu Array : ${lista.length}`)
 // Faça a desestruturação do array
+
+const [primeiro, segundo, terceiro, quarto] = lista
+console.log(`A desestruturação do array do primeiro é : ${primeiro}`)
+console.log(`A desestruturação do array do terceiro é : ${terceiro}`)
+console.log(`A desestruturação do array do segundo é : ${segundo}`)
+
+//Adicionando itens Arrays
+
+lista.push("Açai")
+console.log(`Aqui estou adicionando uma fruta: ${lista}`)
+lista.push("Abacate")
+console.log(`Aqui estou adicionando  mais uma fruta: ${lista}`)
+
+
+//ordenação
+console.log(`Aqui array não ordenado: ${lista}`)
+
+lista.sort()
+console.log(`Aqui array ordenado: ${lista}`)
+
+
+
+
 
 
 
