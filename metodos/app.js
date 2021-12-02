@@ -12,6 +12,7 @@ console.table(estudantes)
 //como pegar entradas de pessoas usuárias no terminal
 //1- eu preciso importar a ferramenta readline-sync
 const pegarEntrada = require("readline-sync")
+//const qualLocal = pegarEntrada.question("De qual local quer encontrar :").toLocaleUpperCase
 
 //como fazer uma pergunta que vai ser respondida no terminal
 const verAlunasPorLocal = pegarEntrada.question("Voce deseja encontrar uma aluna por local ? S/N :").toLocaleUpperCase
